@@ -6,24 +6,24 @@ import ContactUs from "../home/Contact";
 // Sample team data
 const teamData = [
   {
-    name: "John Doe",
+    name: "Abdur Razzaq Mamun",
     position: "CEO",
-    image: "https://randomuser.me/api/portraits/men/1.jpg", // Replace with actual image URLs
+    image: "https://www.bizsolve.com.bd/images/1.jpg", // Replace with actual image URLs
   },
   {
-    name: "Jane Smith",
-    position: "Marketing Head",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    name: "Md. Jane Alam Farazy",
+    position: "Chief Managing Officer",
+    image: "https://www.bizsolve.com.bd/images/janeyweb2.jpg",
   },
   {
-    name: "Michael Johnson",
-    position: "Lead Developer",
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "Farhana Ershad",
+    position: "Operation Manager",
+    image: "https://www.bizsolve.com.bd/images/3.jpg",
   },
   {
-    name: "Sarah Lee",
-    position: "UX Designer",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Zawad Rahman Nishat",
+    position: "Project Coordinator",
+    image: "https://www.bizsolve.com.bd/images/4.jpg",
   },
   // Add more members if needed
 ];

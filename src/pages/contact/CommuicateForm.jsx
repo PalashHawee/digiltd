@@ -3,7 +3,7 @@ import React from "react";
 const CommunicateForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Form submitted!"); // Replace with form submission logic
+    alert("Form submitted!");
   };
   return (
     <div className="bg-white text-gray-800 p-8 rounded-lg shadow-md">

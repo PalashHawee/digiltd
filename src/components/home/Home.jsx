@@ -6,17 +6,23 @@ import ContactUs from "./Contact";
 import MeetTheTeam from "../team/Team";
 import WorkProcess from "../workProcess/WrokProcess";
 import Footer from "../Footer";
+import ServiceSlider from "../services/services-slider";
+import WorkGallery from "../work-gallery/WorkGallery";
+import FeedbackSlider from "../client-feedback/ClientFeedback";
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
-      {/* <AboutSection /> */}
-      <HappyClients />
       <MeetTheTeam />
       <WorkProcess />
-          <ContactUs />
-          <Footer />
+      <ServiceSlider />
+      <WorkGallery />
+      <FeedbackSlider/>
+      <HappyClients />
+
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

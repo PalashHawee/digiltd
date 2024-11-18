@@ -4,35 +4,35 @@ const HappyClients = () => {
   const clients = [
     {
       name: "US-Bangladesh Chamber of Commerce",
-      logo: "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg", // Replace with actual path
+      logo: "https://www.bizsolve.com.bd/images/clients/USBCCI-LOGO.png", // Replace with actual path
     },
     {
       name: "Beacon Pharmaceuticals Limited",
-      logo: "/path-to-beacon-logo.png",
+      logo: "https://www.bizsolve.com.bd/images/clients/beacon.png",
     },
     {
       name: "Atop",
-      logo: "/path-to-atop-logo.png",
+      logo: "https://www.bizsolve.com.bd/images/clients/atop.png",
     },
     {
       name: "Creative Centralian",
-      logo: "/path-to-creative-centralian-logo.png",
+      logo: "https://www.bizsolve.com.bd/images/clients/creative-centralian.png",
     },
     {
       name: "Shadow by Farhana",
-      logo: "/path-to-shadow-logo.png",
+      logo: "https://www.bizsolve.com.bd/images/clients/shadow.png",
     },
     {
       name: "Banolata Agro",
-      logo: "/path-to-banolata-logo.png",
+      logo: "https://www.bizsolve.com.bd/images/clients/banolata-agro.png",
     },
     {
       name: "Alive Spectra",
-      logo: "/path-to-alive-spectra-logo.png",
+      logo: "https://www.bizsolve.com.bd/images/clients/alive-spectra.png",
     },
     {
       name: "Team Alive",
-      logo: "/path-to-team-alive-logo.png",
+      logo: "https://www.bizsolve.com.bd/images/clients/team-alive.png",
     },
   ];
 
