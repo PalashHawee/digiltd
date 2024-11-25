@@ -1,67 +1,92 @@
 import React from "react";
 import Navbar from "../home/NavBar";
-import HeroSection from "../home/Hero";
-import ContactUs from "../home/Contact";
+import Footer from "../Footer";
 
-// Sample team data
-const teamData = [
-  {
-    name: "Abdur Razzaq Mamun",
-    position: "CEO",
-    image: "https://www.bizsolve.com.bd/images/1.jpg", // Replace with actual image URLs
-  },
-  {
-    name: "Md. Jane Alam Farazy",
-    position: "Chief Managing Officer",
-    image: "https://www.bizsolve.com.bd/images/janeyweb2.jpg",
-  },
-  {
-    name: "Farhana Ershad",
-    position: "Operation Manager",
-    image: "https://www.bizsolve.com.bd/images/3.jpg",
-  },
-  {
-    name: "Zawad Rahman Nishat",
-    position: "Project Coordinator",
-    image: "https://www.bizsolve.com.bd/images/4.jpg",
-  },
-  // Add more members if needed
-];
-
-const MeetTheTeam = () => {
+const CEOMessage = () => {
   return (
     <div>
-      {/* <HeroSection/> */}
-      <div className="container mx-auto px-6 py-12">
-        <h1 className="text-3xl font-bold text-center mb-12">Meet The Team</h1>
-        <p className="text-center mb-8 px-40">
-          Three creative minds, with a passion for bringing conceptual designs
-          to life, through the combination of both knowledge and experience,
-          striving to achieve perfection in every aspect of our business, while
-          elevating our clients’ vision.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {teamData.map((member, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transform transition-all duration-300 ease-in-out"
-            >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-32 h-32 rounded-full object-cover mb-4"
-              />
-              <h2 className="text-xl font-semibold text-gray-800">
-                {member.name}
-              </h2>
-              <p className="text-sm text-gray-500">{member.position}</p>
-            </div>
-          ))}
+      {/* Navbar */}
+
+      {/* Banner Section */}
+      <div
+        className="relative bg-cover bg-center h-64 sm:h-80 lg:h-96"
+        style={{ backgroundImage: `url('/images/banner.jpg')` }}
+      >
+        <Navbar />
+        <div className="absolute inset-0 bg-custom-blue flex items-center justify-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white text-center">
+            The Message of the CEO
+          </h1>
         </div>
       </div>
-      {/* <ContactUs/> */}
+
+      {/* Main Content */}
+      <div className="bg-gray-50 py-12 px-4 sm:px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+          {/* CEO Image */}
+          <div className="flex justify-center items-start">
+            <img
+              src="/images/ceo.jpeg" // Replace with your image path
+              alt="CEO of diligence Ltd"
+              className="w-56 h-56 lg:w-64 lg:h-64 rounded-lg object-cover shadow-lg border-4 border-gray-200"
+            />
+          </div>
+
+          {/* CEO Message */}
+          <div className="md:col-span-2">
+            <div className="bg-green-700 p-6 rounded-t-lg text-white">
+              <h2 className="text-2xl font-bold">THE MESSAGE OF THE CEO</h2>
+            </div>
+            <div className="bg-white p-6 rounded-b-lg shadow-lg">
+              <p className="text-gray-700 text-lg sm:text-xl">
+                Diligence Universal Ltd. was launched in Bangladesh as a direct
+                sales company, but now we have also launched many other
+                businesses as a sister concern. In the age of globalization,
+                keeping with rapid growth, Diligence Universal Ltd. stretched
+                itself to cover new boundaries and responded effectively to the
+                long-term needs of the corporate industry.
+              </p>
+              <p className="text-gray-700 text-lg sm:text-xl mt-4">
+                Our Motto is "...Changing the Way of Thinking." We started a new
+                way of doing business and expanded our horizons to cover
+                backward integration. In addition, we diversified to promote IT
+                solutions, business development, branding, marketing,
+                telecommunication projects, and tourism and hospitality
+                management. Diligence Universal Ltd. is now engaged in many
+                fields, with several enterprises involved in diverse businesses.
+              </p>
+              <p className="text-gray-700 text-lg sm:text-xl mt-4">
+                We take pride in the fact that, over the period, with the
+                cooperation of our business partners and clientele, we have
+                achieved meaningful gains in strength as well as goodwill. We do
+                not strive to be the market leader for glory, but we aim to be
+                at the center as far as quality and prices are concerned.
+              </p>
+              <p className="text-gray-700 text-lg sm:text-xl mt-4">
+                We believe businesses should be equipped with cutting-edge
+                technologies to make their operations innovative as well as
+                globally competitive. Our vision is to become a one-stop B2B and
+                B2C solution provider by ensuring the highest level of customer
+                satisfaction and helping you optimize your investment. Let me
+                assure you that Diligence Universal Ltd. will strive to match
+                the global need to enhance the quality of our products and
+                services and will evolve to new heights for the company. Our
+                vivid understanding of market dynamics will help us in the
+                attainment of these goals.
+              </p>
+              <div className="text-right mt-6">
+                <p className="text-lg font-semibold">Farzana Abedin</p>
+                <p className="text-gray-500">CEO & Managing Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
 
-export default MeetTheTeam;
+export default CEOMessage;

@@ -4,10 +4,11 @@ import Home from "./components/home/Home";
 import AboutSection from "./components/home/about/About";
 import HappyClients from "./components/home/HappyClient";
 import ContactUs from "./components/home/Contact";
-import MeetTheTeam from "./components/team/Team";
+// import MeetTheTeam from "./components/team/Team";
 import WorkProcess from "./components/workProcess/WrokProcess";
 import CommunicateForm from "./pages/contact/CommuicateForm";
 import Communicate from "./pages/contact/Commuincate";
+import MeetTheTeam from "./components/team/Team";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutSection />} />
-        <Route path="/team" element={<MeetTheTeam />} />
+        <Route path="/farzana" element={<MeetTheTeam />} />
         <Route path="/work-process" element={<WorkProcess />} />
 
         <Route path="/contact" element={<Communicate />} />

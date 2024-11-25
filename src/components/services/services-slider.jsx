@@ -13,7 +13,7 @@ const services = [
       "Video Marketing & Production",
       "Search Engine Optimization",
     ],
-    image: "/images/digital_marketing.png", // Updated image
+    image: "/images/logo-1.jpg", // Updated image
   },
   {
     title: "Web Development",
@@ -26,7 +26,7 @@ const services = [
       "SEO-friendly Websites",
       "Progressive Web Apps",
     ],
-    image: "images/web_development.png", // Updated image
+    image: "images/agro.png", // Updated image
   },
   {
     title: "Content Creation",
@@ -39,20 +39,20 @@ const services = [
       "Copywriting",
       "Social Media Content",
     ],
-    image: "images/content_creation.png", // Updated image
+    image: "images/logo-3.png", // Updated image
   },
   {
-    title: "Brand Strategy",
+    title: "Agro School",
     paragraph:
-      "Building a strong brand identity and creating strategies to make your business stand out in the market.",
+      "Crafting high-quality content to engage audiences and promote your brand effectively across platforms.",
     keyServices: [
-      "Brand Positioning",
-      "Market Research",
-      "Logo Design",
-      "Campaign Management",
-      "Storytelling",
+      "Blog Writing",
+      "Video Production",
+      "Graphics Design",
+      "Copywriting",
+      "Social Media Content",
     ],
-    image: "images/brand_strategy.png", // Updated image
+    image: "images/school.png", // Updated image
   },
 ];
 
@@ -90,7 +90,7 @@ const ServiceSlider = () => {
           <img
             src={services[currentIndex].image}
             alt={services[currentIndex].title}
-            className="rounded-t-lg md:rounded-none md:rounded-l-lg object-cover w-full h-64 md:h-auto"
+            className="mx-auto w-24 mb-4"
           />
         </div>
 

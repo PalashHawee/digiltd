@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="text-center text-white py-20 px-6">
         
         <div className="flex justify-center">
-          <img src={HeroImage} alt="BizSolve Icon" className="" />
+          <img src={HeroImage} alt="Diligence Icon" className="" />
         </div>
       </div>
 
