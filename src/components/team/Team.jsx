@@ -1,92 +1,129 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../home/NavBar";
-import Footer from "../Footer";
 
-const CEOMessage = () => {
+const HeroSection = () => {
+  const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
+
+  // Track mouse enter and leave events
+  const handleMouseEnter = () => {
+    setCirclePosition({ x: 20, y: 20 });
+  };
+
+  const handleMouseLeave = () => {
+    setCirclePosition({ x: 0, y: 0 });
+  };
+
+  // Scroll to the contact section
+  const handleCircleClick = () => {
+    const contactSection = document.getElementById("contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
-      {/* Navbar */}
-
-      {/* Banner Section */}
-      <div
-        className="relative bg-cover bg-center h-64 sm:h-80 lg:h-96"
-        style={{ backgroundImage: `url('/images/banner.jpg')` }}
-      >
+      <div className="bg-gray-800">
         <Navbar />
-        <div className="absolute inset-0 bg-custom-blue flex items-center justify-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white text-center">
-            The Message of the CEO
-          </h1>
-        </div>
       </div>
 
-      {/* Main Content */}
-      <div className="bg-gray-50 py-12 px-4 sm:px-8 lg:px-16">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-          {/* CEO Image */}
-          <div className="flex justify-center items-start">
+      <div className="bg-gray-800 relative bg-peach-100 min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 lg:flex-row lg:justify-between font-sans">
+        {/* Left Content */}
+        <div className="text-center lg:text-left lg:max-w-lg flex flex-col items-center lg:items-start lg:w-1/2">
+          <h1 className="text-blue-600 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Hello, I’m{" "}
+            <span className="inline-block relative text-yellow-500">✌️</span>
+            <br />
+            <span className="text-white">Eng. Farzana Abedin</span>
+          </h1>
+          <p className="text-white text-lg mt-3">Managing Director</p>
+          <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-4">
+            <button className="px-6 py-2 text-white bg-blue-600 rounded hover:bg-green-600 transition">
+              Let’s Talk
+            </button>
+            <button className="px-6 py-2 border border-green-600 text-white rounded hover:bg-green-600 hover:text-white transition">
+              My Work
+            </button>
+          </div>
+
+          {/* Worldwide Clients */}
+          <div className="mt-10">
+            <p className="text-white font-semibold text-lg">
+              1.2k+ Worldwide Clients
+            </p>
+            <div className="mt-4 flex justify-center lg:justify-start space-x-6">
+              {/* Social Media Links */}
+              <a
+                href="#"
+                className="text-blue-500 hover:text-blue-600 transition"
+                title="Behance"
+              >
+                <i className="fab fa-behance text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                className="text-blue-500 hover:text-blue-600 transition"
+                title="LinkedIn"
+              >
+                <i className="fab fa-linkedin text-2xl"></i>
+              </a>
+
+              <a
+                href="#"
+                className="text-blue-500 hover:text-blue-600 transition"
+                title="GitHub"
+              >
+                <i className="fab fa-facebook text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Content (Profile Picture & Animated Circle) */}
+        <div className="relative mt-8 lg:mt-0 flex justify-center items-center lg:justify-end w-full lg:w-1/2">
+          {/* Profile Picture */}
+          <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg z-10">
             <img
-              src="/images/ceo.jpeg" // Replace with your image path
-              alt="CEO of diligence Ltd"
-              className="w-56 h-56 lg:w-64 lg:h-64 rounded-lg object-cover shadow-lg border-4 border-gray-200"
+              src="/images/ceo.jpeg"
+              alt="Mark Henry"
+              className="rounded-full object-cover w-full h-full"
             />
           </div>
 
-          {/* CEO Message */}
-          <div className="md:col-span-2">
-            <div className="bg-green-700 p-6 rounded-t-lg text-white">
-              <h2 className="text-2xl font-bold">THE MESSAGE OF THE CEO</h2>
-            </div>
-            <div className="bg-white p-6 rounded-b-lg shadow-lg">
-              <p className="text-gray-700 text-lg sm:text-xl">
-                Diligence Universal Ltd. was launched in Bangladesh as a direct
-                sales company, but now we have also launched many other
-                businesses as a sister concern. In the age of globalization,
-                keeping with rapid growth, Diligence Universal Ltd. stretched
-                itself to cover new boundaries and responded effectively to the
-                long-term needs of the corporate industry.
-              </p>
-              <p className="text-gray-700 text-lg sm:text-xl mt-4">
-                Our Motto is "...Changing the Way of Thinking." We started a new
-                way of doing business and expanded our horizons to cover
-                backward integration. In addition, we diversified to promote IT
-                solutions, business development, branding, marketing,
-                telecommunication projects, and tourism and hospitality
-                management. Diligence Universal Ltd. is now engaged in many
-                fields, with several enterprises involved in diverse businesses.
-              </p>
-              <p className="text-gray-700 text-lg sm:text-xl mt-4">
-                We take pride in the fact that, over the period, with the
-                cooperation of our business partners and clientele, we have
-                achieved meaningful gains in strength as well as goodwill. We do
-                not strive to be the market leader for glory, but we aim to be
-                at the center as far as quality and prices are concerned.
-              </p>
-              <p className="text-gray-700 text-lg sm:text-xl mt-4">
-                We believe businesses should be equipped with cutting-edge
-                technologies to make their operations innovative as well as
-                globally competitive. Our vision is to become a one-stop B2B and
-                B2C solution provider by ensuring the highest level of customer
-                satisfaction and helping you optimize your investment. Let me
-                assure you that Diligence Universal Ltd. will strive to match
-                the global need to enhance the quality of our products and
-                services and will evolve to new heights for the company. Our
-                vivid understanding of market dynamics will help us in the
-                attainment of these goals.
-              </p>
-              <div className="text-right mt-6">
-                <p className="text-lg font-semibold">Farzana Abedin</p>
-                <p className="text-gray-500">CEO & Managing Director</p>
+          {/* Animated Circle (Positioned below on small screens only) */}
+          <div
+            className="flex justify-center mt-8 sm:mt-12 lg:mt-0 lg:absolute lg:bottom-[-20px] lg:left-0 lg:right-0 lg:mx-auto z-20 cursor-pointer"
+            style={{
+              transform: `translate(${circlePosition.x}px, ${circlePosition.y}px)`,
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={handleCircleClick}
+          >
+            <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full bg-blue-900   border-4 border-green-600 animate-spin-slow hover:animate-pulse flex items-center justify-center">
+              <div className="text-white font-semibold text-sm sm:text-lg">
+                Contact Me
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer */}
-      <Footer />
+      {/* Contact Section */}
+      <div
+        id="contact-section"
+        className="min-h-screen bg-gray-100 flex items-center justify-center"
+      >
+        <div className="text-center px-6 sm:px-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black">
+            Contact Me
+          </h2>
+          <p className="text-gray-600 mt-4">Feel free to get in touch!</p>
+          {/* Add your contact form or content here */}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default CEOMessage;
+export default HeroSection;

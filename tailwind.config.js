@@ -89,10 +89,20 @@ export const theme = {
         from: { height: "var(--radix-accordion-content-height)" },
         to: { height: "0" },
       },
+      contentAround: {
+        "0%": {
+          transform: "rotate(0deg) translateX(50%)",
+        },
+        "100%": {
+          transform: "rotate(360deg) translateX(50%)",
+        },
+      },
     },
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
+      "spin-slow": "spin 4s linear infinite",
+      "content-around": "contentAround 6s linear infinite",
     },
   },
 };
