@@ -17,6 +17,17 @@ export const theme = {
   },
   extend: {
     colors: {
+      customBlue: {
+        100: "#D6F0FA", // Very light blue
+        200: "#ADE1F5", // Lighter blue
+        300: "#85D1F0", // Light blue
+        400: "#5CC2EB", // Medium blue
+        500: "rgb(18, 150, 211)", // Original blue
+        600: "#127BB5", // Darker blue
+        700: "#0D5A86", // Even darker blue
+        800: "#083858", // Deep blue
+        900: "#03192A", // Very dark blue
+      },
       customGreen: {
         100: "#E6F6E5", // Light Green
         200: "#CDEDCB", // Lighter Green

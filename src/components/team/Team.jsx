@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "../home/NavBar";
+import AboutMeSection from "./AboutMe";
+import Achievements from "./Achievements";
+import MyWorksSection from "./Works";
 
 const HeroSection = () => {
   const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
@@ -108,6 +111,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      <AboutMeSection />
+      {/* <Achievements/> */}
+      <MyWorksSection/>
 
       {/* Contact Section */}
       <div
