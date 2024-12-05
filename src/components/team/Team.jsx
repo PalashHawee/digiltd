@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Navbar from "../home/NavBar";
 import AboutMeSection from "./AboutMe";
-import Achievements from "./Achievements";
+// import Achievements from "./Achievements";
 import MyWorksSection from "./Works";
+// import ResumeSection from "./Resume";
+import Resume from "./Resume";
+import ClientFeedbackSection from "./Feedback";
+// import Portfolio from "./Portfolio";
 
 const HeroSection = () => {
   const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
@@ -113,7 +117,12 @@ const HeroSection = () => {
       </div>
       <AboutMeSection />
       {/* <Achievements/> */}
-      <MyWorksSection/>
+      <MyWorksSection />
+      <Resume />
+
+      <ClientFeedbackSection/>
+
+      
 
       {/* Contact Section */}
       <div
