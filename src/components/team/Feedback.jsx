@@ -58,10 +58,10 @@ const ClientFeedbackSection = () => {
           What Our Clients Say
         </h2>
 
-        <div className="flex justify-center items-center space-x-8">
+        <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
           {/* Client Photo and Feedback */}
           <div
-            className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg"
+            className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-lg"
             data-aos="zoom-in"
           >
             <img
