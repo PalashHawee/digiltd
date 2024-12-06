@@ -4,3 +4,9 @@
 
 @import "tailwindcss/utilities";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
+
+/* section{
+    height: 100vh;
+    scroll-snap-align: center;
+} */
+
