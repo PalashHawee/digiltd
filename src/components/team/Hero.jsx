@@ -4,6 +4,12 @@ import { Canvas } from "@react-three/fiber";
 import Shape from "./ThreeDShape";
 
 const Hero = () => {
+  const scrollToSection = () => {
+    const section = document.getElementById("contact-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div>
       <div className="bg-gray-800 relative bg-peach-100 min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 lg:flex-row lg:justify-between font-sans">
@@ -79,13 +85,13 @@ const Hero = () => {
 
           {/* Animated Circle (Positioned below on small screens only) */}
           <motion.a
-            href="/#contact"
-            className="contactLink"
+            onClick={scrollToSection}
+            className="contactLink cursor-pointer"
             animate={{ x: [200, 0], opacity: [0, 1] }}
             transition={{ duration: 2 }}
           >
             <motion.div
-              className="conatactButton"
+              className="contactButton"
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             >
