@@ -4,23 +4,10 @@ const Education = () => {
   const educationData = [
     {
       id: 1,
-      duration: "03/2022 – 07/2024",
-      institution: "Axtra",
-      degree: "BA Business Management",
-    },
-    {
-      id: 2,
-      duration: "03/2022 – 07/2023",
-      institution: "Axtra",
-      degree: "BA Business Management",
-    },
-    {
-      id: 3,
-      duration: "03/2023 – 07/2024",
-      institution: "Axtra",
-      degree: "BA Business Management",
+      description: `Engr. Abedin’s rise to prominence began with a solid academic foundation. She earned a Bachelor's degree in Metallurgical Engineering from Bangladesh University of Engineering & Technology (BUET), one of the country's most prestigious institutions. Later, she expanded her expertise by pursuing a Master’s in Public Health (MPH) from North South University, Dhaka. Her diverse academic background empowered her to bridge the gap between technical disciplines and health, positioning her to take on leadership roles in various industries.`,
     },
   ];
+
 
   return (
     <div className="bg-gradient-to-b from-customBlue-800 to-customGreen-800 py-10">
@@ -33,13 +20,9 @@ const Education = () => {
             key={item.id}
             className="group transition transform hover:scale-105 hover:bg-customBlue-800 bg-gradient-to-b from-customBlue-800 to-customGreen-800 p-6 rounded-lg shadow-md hover:shadow-lg cursor-pointer"
           >
-            <p className="text-sm text-white">{item.duration}</p>
-            <p className="text-base font-medium text-white flex items-center">
-              <span className="h-2 w-2 bg-orange-500 rounded-full inline-block mr-2"></span>
-              {item.institution}
-            </p>
+            
             <h3 className="text-lg font-semibold text-white mt-2">
-              {item.degree}
+              {item.description}
             </h3>
           </div>
         ))}

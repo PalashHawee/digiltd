@@ -12,6 +12,7 @@ import Gallery from "./gallery/Gallery";
 
 import Contact from "../contact/Contact";
 import Footer from "../Footer";
+import AboutFarzanaAbedin from "./Meet";
 
 
 
@@ -29,9 +30,10 @@ const HeroSection = () => {
       <div className="bg-gray-800">
         <Hero />
       </div>
+      <AboutFarzanaAbedin/>
       <AboutMeSection />
       {/* <Achievements/> */}
-      <MyWorksSection />
+      {/* <MyWorksSection /> */}
       <Resume />
 
       <ClientFeedbackSection />

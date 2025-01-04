@@ -1,21 +1,33 @@
 import React from "react";
-import { FaTrophy, FaMedal, FaStar, FaAward } from "react-icons/fa";
+import {
+  FaTrophy,
+  FaMedal,
+  FaStar,
+  FaAward,
+  FaGraduationCap,
+  FaBroadcastTower,
+} from "react-icons/fa";
 
 const awards = [
   {
-    name: "Best Developer",
+    name: `Pioneering Diligence Universal Limited and Diligence Agro
+`,
     icon: <FaTrophy size={50} />,
     color: "bg-yellow-500",
   },
   {
-    name: "Employee of the Year",
+    name: `Advocacy for Human Rights and Women Empowerment`,
     icon: <FaMedal size={50} />,
     color: "bg-green-500",
   },
-  { name: "Top Performer", icon: <FaStar size={50} />, color: "bg-blue-500" },
   {
-    name: "Excellence in Innovation",
-    icon: <FaAward size={50} />,
+    name: `Leadership in the Field of Education`,
+    icon: <FaGraduationCap size={50} />,
+    color: "bg-blue-500",
+  },
+  {
+    name: "Contributions to Journalism and Media",
+    icon: <FaBroadcastTower size={50} />,
     color: "bg-purple-500",
   },
 ];

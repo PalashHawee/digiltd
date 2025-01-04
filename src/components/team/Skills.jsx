@@ -5,14 +5,39 @@ import {
   FaDatabase,
   FaHtml5,
   FaCss3Alt,
+  FaUsers,
+  FaGraduationCap,
+  FaSuitcase,
+  FaNewspaper,
+  FaHandsHelping,
 } from "react-icons/fa";
 
 const skills = [
-  { name: "React", icon: <FaReact size={40} />, color: "bg-blue-500" },
-  { name: "Node.js", icon: <FaNodeJs size={40} />, color: "bg-green-500" },
-  { name: "MongoDB", icon: <FaDatabase size={40} />, color: "bg-green-700" },
-  { name: "HTML5", icon: <FaHtml5 size={40} />, color: "bg-orange-600" },
-  { name: "CSS3", icon: <FaCss3Alt size={40} />, color: "bg-blue-600" },
+  {
+    name: "Leadership and Strategic Planning",
+    icon: <FaUsers size={40} />,
+    color: "bg-blue-500",
+  },
+  {
+    name: "Education Sector Expertise",
+    icon: <FaGraduationCap size={40} />,
+    color: "bg-green-500",
+  },
+  {
+    name: "Entrepreneurship and Business Management",
+    icon: <FaSuitcase size={40} />,
+    color: "bg-green-700",
+  },
+  {
+    name: "Media and Communication",
+    icon: <FaNewspaper size={40} />,
+    color: "bg-orange-600",
+  },
+  {
+    name: "Human Rights Advocacy and Social Welfare",
+    icon: <FaHandsHelping size={40} />,
+    color: "bg-blue-600",
+  },
 ];
 
 const Skills = () => {

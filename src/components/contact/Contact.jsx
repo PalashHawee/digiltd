@@ -1,20 +1,35 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com"; // import EmailJS library
 
 const Contact = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    alert("Form submitted successfully!");
+  // Handle form submission
+  const onSubmit = async (data) => {
+    try {
+      const response = await emailjs.send(
+        "service_2ihzxlz", // Your EmailJS service ID
+        "template_g6ue25k", // Your EmailJS template ID
+        data, // form data
+        "vqaldIDtu5PMgVDJ7" // Your EmailJS user ID
+      );
+      console.log("Form submitted successfully", response);
+      alert("Form submitted successfully!");
+      reset(); // Reset form fields after submission
+    } catch (error) {
+      console.error("Error in form submission", error);
+      alert("There was an error submitting the form. Please try again later.");
+    }
   };
 
   return (
-    <div className=" text-white flex justify-center items-center p-6">
+    <div className="text-white flex justify-center items-center p-6">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Contact Info */}
         <div className="space-y-6">
@@ -25,19 +40,19 @@ const Contact = () => {
               <div className="bg-blue-600 p-3 rounded-full">
                 <i className="fas fa-map-marker-alt"></i>
               </div>
-              <p>20, Somewhere in the world</p>
+              <p>House 39, Road 24, Gulshan 1, Dhaka-1212, Bangladesh</p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="bg-blue-600 p-3 rounded-full">
                 <i className="fas fa-envelope"></i>
               </div>
-              <p>hello@dodo.com</p>
+              <p>farzana@diligenceuniversal.com</p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="bg-blue-600 p-3 rounded-full">
                 <i className="fas fa-phone-alt"></i>
               </div>
-              <p>+123 456 7890</p>
+              <p>+8801955510730</p>
             </div>
           </div>
         </div>
