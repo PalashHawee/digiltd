@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com"; // import EmailJS library
+import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify"; // Import Toastify
+import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 
 const Contact = () => {
   const {
@@ -13,18 +15,28 @@ const Contact = () => {
   // Handle form submission
   const onSubmit = async (data) => {
     try {
+      const templateParams = {
+        from_name: data.name, // Sender's name
+        to_name: "Your Company Name", // Recipient's name
+        email: data.email, // Sender's email
+        subject: data.subject, // Subject
+        message: data.message, // Message
+        phone: data.phone, // Phone (if needed)
+      };
+
       const response = await emailjs.send(
         "service_2ihzxlz", // Your EmailJS service ID
         "template_g6ue25k", // Your EmailJS template ID
-        data, // form data
+        templateParams, // Data to be sent
         "vqaldIDtu5PMgVDJ7" // Your EmailJS user ID
       );
+
       console.log("Form submitted successfully", response);
-      alert("Form submitted successfully!");
+      toast.success("Your response has been submitted successfully!"); // Success message
       reset(); // Reset form fields after submission
     } catch (error) {
       console.error("Error in form submission", error);
-      alert("There was an error submitting the form. Please try again later.");
+      toast.error("There was an error submitting the form. Please try again."); // Error message
     }
   };
 
@@ -34,7 +46,7 @@ const Contact = () => {
         {/* Contact Info */}
         <div className="space-y-6">
           <h2 className="text-3xl font-bold">Contact</h2>
-          <h3 className="text-4xl font-semibold">I Want to Hear from You</h3>
+          <h3 className="text-4xl font-semibold">We Want to Hear from You</h3>
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
               <div className="bg-blue-600 p-3 rounded-full">
@@ -148,6 +160,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <ToastContainer /> {/* Add ToastContainer */}
     </div>
   );
 };
