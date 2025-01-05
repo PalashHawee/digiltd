@@ -19,7 +19,7 @@ const Hero = () => {
             Hello, I’m{" "}
             <span className="inline-block relative text-yellow-500">✌️</span>
             <br />
-            <span className="text-white">Eng. Farzana Abedin</span>
+            <span className="text-white">Engr. Farzana Abedin</span>
           </h1>
           <p className="text-white text-lg mt-3">Managing Director</p>
           <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-4">

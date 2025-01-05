@@ -37,7 +37,7 @@ const HeroSection = () => {
       <Resume />
 
       <ClientFeedbackSection />
-      <Gallery />
+      {/* <Gallery /> */}
 
       {/* Contact Section */}
       <div

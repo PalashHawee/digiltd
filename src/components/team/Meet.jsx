@@ -5,7 +5,7 @@ const AboutFarzanaAbedin = () => {
     <div className="bg-gradient-to-b from-customBlue-800 to-customGreen-800 text-white py-16 px-6 md:px-20">
       {/* Heading Section */}
       <div className="text-center mb-10">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-customBlue-300 via-customGreen-700 to-customBlue-200 animate-heading">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-customGreen-400 to-blue-300 animate-heading">
           Meet Engr. Farzana Abedin, FIEB
         </h1>
         <p className="text-lg text-white mt-4">
