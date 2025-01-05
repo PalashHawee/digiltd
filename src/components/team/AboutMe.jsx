@@ -40,10 +40,10 @@ const AboutMeSection = () => {
           </div>
 
           {/* 12 Years of Success */}
-          <div className="mt-6 text-center">
+          {/* <div className="mt-6 text-center">
             <p className="text-5xl font-bold text-blue-400">12</p>
             <p className="text-lg">Successful Years</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Text Content Section */}
