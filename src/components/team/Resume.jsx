@@ -12,8 +12,8 @@ const Resume = () => {
     switch (activeSection) {
       case "about":
         return <AboutMeSection />;
-      case "experience":
-        return <Experience />;
+      // case "experience":
+      //   return <Experience />;
       case "education":
         return <Education />;
       case "skills":
@@ -42,7 +42,7 @@ const Resume = () => {
         >
           About Me
         </button>
-        <button
+        {/* <button
           onClick={() => setActiveSection("experience")}
           className={`px-4 py-2 text-sm font-medium rounded mb-4 sm:mb-0 w-full sm:w-auto ${
             activeSection === "experience"
@@ -51,7 +51,7 @@ const Resume = () => {
           }`}
         >
           Experience
-        </button>
+        </button> */}
         <button
           onClick={() => setActiveSection("education")}
           className={`px-4 py-2 text-sm font-medium rounded mb-4 sm:mb-0 w-full sm:w-auto ${
