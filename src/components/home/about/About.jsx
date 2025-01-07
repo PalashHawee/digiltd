@@ -7,18 +7,20 @@ import ContactUs from "../Contact";
 import Footer from "@/components/Footer";
 import VisionMissionValues from "@/components/visionMission/VisionMissionValues";
 import Contact from "@/components/contact/Contact";
+import SisterConcerns from "./SisterConcern";
 
 const AboutSection = () => {
   return (
     <>
       <div>
         <HeroSection />
-        <CardCon />
+        {/* <CardCon /> */}
 
         <div className="container mx-auto px-4 py-16">
           <VisionMissionValues />
         </div>
-        <HappyClients />
+        <SisterConcerns/>
+        {/* <HappyClients /> */}
         {/* Contact Section */}
         <div
           id="contact-section"

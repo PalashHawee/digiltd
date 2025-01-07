@@ -6,7 +6,7 @@ import ContactUs from "./Contact";
 // import MeetTheTeam from "../team/Team";
 import WorkProcess from "../workProcess/WrokProcess";
 import Footer from "../Footer";
-import ServiceSlider from "../services/services-slider";
+import ServiceSlider from "../services/Services";
 import WorkGallery from "../work-gallery/WorkGallery";
 import FeedbackSlider from "../client-feedback/ClientFeedback";
 import VisionMissionValues from "../visionMission/VisionMissionValues";
@@ -19,11 +19,11 @@ const Home = () => {
         <HeroSection />
         <VisionMissionValues />
         {/* <MeetTheTeam /> */}
-        <WorkProcess />
-        <ServiceSlider />
+        {/* <WorkProcess /> */}
+        {/* <ServiceSlider /> */}
         <WorkGallery />
-        <FeedbackSlider />
-        <HappyClients />
+        {/* <FeedbackSlider /> */}
+        {/* <HappyClients /> */}
         <div
           id="contact-section"
           className="min-h-screen bg-gradient-to-b from-customBlue-700 to-customBlue-800  flex items-center justify-center"

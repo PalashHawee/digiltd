@@ -20,12 +20,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="container mx-auto flex justify-between items-center py-4 px-6 text-white sticky top-0 z-50 bg-gray-800 shadow-md">
+    <nav className="w-full flex justify-between items-center py-4 px-6 md:px-12 text-white sticky top-0 z-50 bg-gray-800 shadow-md">
       {/* Logo Section */}
       <div className="text-2xl font-bold flex items-center">
         <Link to="/" className="flex items-center">
           {/* Link logo to the homepage */}
-          <img src={Logo} alt="Diligence Logo" className="h-10  w-15" />
+          <img src={Logo} alt="Diligence Logo" className="h-10 w-15" />
           <span>
             <span>iligence</span>
             <span className="text-green-600 ml-2">Universal Ltd</span>
@@ -88,11 +88,11 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            to="/works"
+            to="/careers"
             className="block py-2 px-4 hover:text-green-400"
             onClick={() => setIsMenuOpen(false)}
           >
-            Our Works
+            Careers
           </Link>
         </li>
         <li>

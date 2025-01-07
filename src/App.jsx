@@ -9,6 +9,8 @@ import WorkProcess from "./components/workProcess/WrokProcess";
 import CommunicateForm from "./pages/contact/CommuicateForm";
 import Communicate from "./pages/contact/Commuincate";
 import MeetTheTeam from "./components/team/Team";
+import Services from "./components/services/Services";
+import Career from "./components/careers/Careers";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/about" element={<AboutSection />} />
         <Route path="/farzana" element={<MeetTheTeam />} />
         <Route path="/work-process" element={<WorkProcess />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/careers" element={<Career />} />
 
         <Route path="/contact" element={<Communicate />} />
       </Routes>

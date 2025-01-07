@@ -1,21 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const VisionMissionValues = () => {
   return (
     <div className="bg-green-50 py-12 px-4 sm:px-8 lg:px-16">
       <div className="max-w-5xl mx-auto text-center">
-        {/* Logo and Title */}
-        <div className="mb-8">
-          <img
-            src="/images/agro.png"
-            alt="Diligence Agro Logo"
-            className="mx-auto w-24 mb-4"
-          />
-          <h1 className="text-4xl font-bold text-green-800">Diligence Agro</h1>
-          <p className="text-lg font-medium text-gray-600">
+        {/* Animated Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mb-10"
+        >
+          <h1 className="text-5xl font-extrabold text-green-800">
             Vision, Mission & Slogan
-          </p>
-        </div>
+          </h1>
+        </motion.div>
 
         {/* Vision, Mission, Values Section */}
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -31,6 +31,7 @@ const VisionMissionValues = () => {
               is built on innovation, sustainability, and integrity.
             </p>
           </div>
+
           {/* Mission */}
           <div className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-green-500">
             <h2 className="text-2xl font-semibold text-green-700 mb-4">
@@ -42,6 +43,7 @@ const VisionMissionValues = () => {
               improvement and giving back to our communities.
             </p>
           </div>
+
           {/* Values */}
           <div className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-green-500">
             <h2 className="text-2xl font-semibold text-green-700 mb-4">
