@@ -5,13 +5,21 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle menu visibility
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to toggle dropdown visibility
   const menuRef = useRef(null); // Ref for the dropdown menu
+  const dropdownRef = useRef(null); // Ref for the Sectors dropdown
 
   // Close menu when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
         setIsMenuOpen(false); // Close menu if clicked outside
+        setIsDropdownOpen(false); // Close dropdown if clicked outside
       }
     };
 
@@ -85,6 +93,100 @@ const Navbar = () => {
           >
             Our Services
           </Link>
+        </li>
+        <li
+          className="relative"
+          ref={dropdownRef} // Reference for the dropdown menu
+          onMouseEnter={() => setIsDropdownOpen(true)}
+          onMouseLeave={() => setIsDropdownOpen(false)}
+        >
+          <button className="block py-2 px-4 hover:text-green-400 uppercase font-semibold focus:outline-none">
+            Sectors
+          </button>
+          {/* Dropdown Menu */}
+          <ul
+            className={`absolute left-0 top-full bg-gray-800 shadow-lg text-sm text-white w-48 transition-all duration-300 ease-in-out ${
+              isDropdownOpen ? "block" : "hidden"
+            }`}
+          >
+            <li className="relative">
+              <button className="block py-2 px-4 w-full text-left hover:text-green-400 focus:outline-none">
+                Agriculture
+              </button>
+              <ul className="pl-4">
+                <li>
+                  <Link
+                    to="/agriculture/premium-food-products"
+                    className="block py-2 px-4 hover:text-green-400"
+                  >
+                    Premium Food Product
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/agriculture/supporting-farmers"
+                    className="block py-2 px-4 hover:text-green-400"
+                  >
+                    Supporting Farmers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/agriculture/agro-sustainability"
+                    className="block py-2 px-4 hover:text-green-400"
+                  >
+                    Agro Sustainability
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="relative">
+              <button className="block py-2 px-4 w-full text-left hover:text-green-400 focus:outline-none">
+                Education
+              </button>
+              <ul className="pl-4">
+                <li>
+                  <Link
+                    to="/education/school-programs"
+                    className="block py-2 px-4 hover:text-green-400"
+                  >
+                    School Programs
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/education/partnerships"
+                    className="block py-2 px-4 hover:text-green-400"
+                  >
+                    Partnerships in Education
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="relative">
+              <button className="block py-2 px-4 w-full text-left hover:text-green-400 focus:outline-none">
+                Engineering
+              </button>
+              <ul className="pl-4">
+                <li>
+                  <Link
+                    to="/engineering/services"
+                    className="block py-2 px-4 hover:text-green-400"
+                  >
+                    Engineering Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/engineering/ongoing-projects"
+                    className="block py-2 px-4 hover:text-green-400"
+                  >
+                    Ongoing Projects
+                  </Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
         <li>
           <Link
