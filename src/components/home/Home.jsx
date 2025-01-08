@@ -23,7 +23,7 @@ const Home = () => {
         {/* <MeetTheTeam /> */}
         {/* <WorkProcess /> */}
         {/* <ServiceSlider /> */}
-        <WorkGallery />
+        {/* <WorkGallery /> */}
         {/* <FeedbackSlider /> */}
         {/* <HappyClients /> */}
         <div

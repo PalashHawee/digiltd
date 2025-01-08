@@ -11,7 +11,7 @@ const WorkGallery = () => {
   return (
     <div className="p-6 md:p-10">
       <h2 className="text-center text-2xl md:text-3xl font-bold mb-6">
-        Work Gallery
+         Gallery
       </h2>
       <div className="text-center mb-4 space-x-4">
         <button className="px-4 py-2 border rounded hover:bg-gray-200">
