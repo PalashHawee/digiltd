@@ -7,9 +7,9 @@ import Footer from "../Footer";
 const Services = () => {
   return (
     <>
+      <Navbar />
       <div>
         <div className="relative bg-gray-800">
-          <Navbar />
           <ServicesHero />
         </div>
 

@@ -5,20 +5,21 @@ import HeroImage from "../../assets/hero.png";
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-gray-800">
-      {/* Navigation */}
+    <>
       <Navbar />
+      <div className="relative bg-gray-800">
+        {/* Navigation */}
 
-      {/* Hero Section */}
-      <div className="text-center text-white py-20 px-6">
-        
-        <div className="flex justify-center">
-          <img src={HeroImage} alt="Diligence Icon" className="" />
+        {/* Hero Section */}
+        <div className="text-center text-white py-20 px-6">
+          <div className="flex justify-center">
+            <img src={HeroImage} alt="Diligence Icon" className="" />
+          </div>
         </div>
-      </div>
 
-      {/* Wave Background */}
-    </div>
+        {/* Wave Background */}
+      </div>
+    </>
   );
 };
 

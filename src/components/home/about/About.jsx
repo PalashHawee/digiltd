@@ -9,6 +9,8 @@ import VisionMissionValues from "@/components/visionMission/VisionMissionValues"
 import Contact from "@/components/contact/Contact";
 import SisterConcerns from "./SisterConcern";
 
+import TeamMember from "./Leadership";
+
 const AboutSection = () => {
   return (
     <>
@@ -19,6 +21,7 @@ const AboutSection = () => {
         <div className="container mx-auto px-4 py-16">
           <VisionMissionValues />
         </div>
+        <TeamMember/>
         <SisterConcerns/>
         {/* <HappyClients /> */}
         {/* Contact Section */}

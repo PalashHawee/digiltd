@@ -22,34 +22,35 @@ const HeroSection = () => {
   
 
   return (
-    <div>
-      <div className="bg-gray-800">
-        <Navbar />
-      </div>
+    <>
+      <Navbar />
+      <div>
+        
 
-      <div className="bg-gray-800">
-        <Hero />
-      </div>
-      <AboutFarzanaAbedin/>
-      <AboutMeSection />
-      {/* <Achievements/> */}
-      {/* <MyWorksSection /> */}
-      <Resume />
-
-      {/* <ClientFeedbackSection /> */}
-      {/* <Gallery /> */}
-
-      {/* Contact Section */}
-      <div
-        id="contact-section"
-        className="min-h-screen bg-gradient-to-b from-customBlue-700 to-customBlue-800  flex items-center justify-center"
-      >
-        <div className="text-center px-6 sm:px-12">
-          <Contact />
+        <div className="bg-gray-800">
+          <Hero />
         </div>
+        <AboutFarzanaAbedin />
+        <AboutMeSection />
+        {/* <Achievements/> */}
+        {/* <MyWorksSection /> */}
+        <Resume />
+
+        {/* <ClientFeedbackSection /> */}
+        {/* <Gallery /> */}
+
+        {/* Contact Section */}
+        <div
+          id="contact-section"
+          className="min-h-screen bg-gradient-to-b from-customBlue-700 to-customBlue-800  flex items-center justify-center"
+        >
+          <div className="text-center px-6 sm:px-12">
+            <Contact />
+          </div>
+        </div>
+        <Footer />
       </div>
-      <Footer/>
-    </div>
+    </>
   );
 };
 

@@ -11,12 +11,14 @@ import WorkGallery from "../work-gallery/WorkGallery";
 import FeedbackSlider from "../client-feedback/ClientFeedback";
 import VisionMissionValues from "../visionMission/VisionMissionValues";
 import Contact from "../contact/Contact";
+import Introduction from "./about/Intro";
 
 const Home = () => {
   return (
     <>
       <div>
         <HeroSection />
+        <Introduction/>
         <VisionMissionValues />
         {/* <MeetTheTeam /> */}
         {/* <WorkProcess /> */}

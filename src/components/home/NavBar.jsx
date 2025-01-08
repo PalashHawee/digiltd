@@ -109,82 +109,29 @@ const Navbar = () => {
               isDropdownOpen ? "block" : "hidden"
             }`}
           >
-            <li className="relative">
-              <button className="block py-2 px-4 w-full text-left hover:text-green-400 focus:outline-none">
+            <li>
+              <Link
+                to="/agriculture"
+                className="block py-2 px-4 hover:text-green-400"
+              >
                 Agriculture
-              </button>
-              <ul className="pl-4">
-                <li>
-                  <Link
-                    to="/agriculture/premium-food-products"
-                    className="block py-2 px-4 hover:text-green-400"
-                  >
-                    Premium Food Product
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/agriculture/supporting-farmers"
-                    className="block py-2 px-4 hover:text-green-400"
-                  >
-                    Supporting Farmers
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/agriculture/agro-sustainability"
-                    className="block py-2 px-4 hover:text-green-400"
-                  >
-                    Agro Sustainability
-                  </Link>
-                </li>
-              </ul>
+              </Link>
             </li>
-            <li className="relative">
-              <button className="block py-2 px-4 w-full text-left hover:text-green-400 focus:outline-none">
+            <li>
+              <Link
+                to="/education"
+                className="block py-2 px-4 hover:text-green-400"
+              >
                 Education
-              </button>
-              <ul className="pl-4">
-                <li>
-                  <Link
-                    to="/education/school-programs"
-                    className="block py-2 px-4 hover:text-green-400"
-                  >
-                    School Programs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/education/partnerships"
-                    className="block py-2 px-4 hover:text-green-400"
-                  >
-                    Partnerships in Education
-                  </Link>
-                </li>
-              </ul>
+              </Link>
             </li>
-            <li className="relative">
-              <button className="block py-2 px-4 w-full text-left hover:text-green-400 focus:outline-none">
+            <li>
+              <Link
+                to="/engineering"
+                className="block py-2 px-4 hover:text-green-400"
+              >
                 Engineering
-              </button>
-              <ul className="pl-4">
-                <li>
-                  <Link
-                    to="/engineering/services"
-                    className="block py-2 px-4 hover:text-green-400"
-                  >
-                    Engineering Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/engineering/ongoing-projects"
-                    className="block py-2 px-4 hover:text-green-400"
-                  >
-                    Ongoing Projects
-                  </Link>
-                </li>
-              </ul>
+              </Link>
             </li>
           </ul>
         </li>
