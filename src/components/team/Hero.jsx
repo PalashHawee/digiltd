@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion"; // Ensure this import is from framer-motion
 import { Canvas } from "@react-three/fiber";
 import Shape from "./ThreeDShape";
+import { Facebook, Linkedin, X } from "lucide-react"; // Ensure icons are imported correctly
 
 const Hero = () => {
   const scrollToSection = () => {
@@ -10,6 +11,7 @@ const Hero = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <div>
       <div className="bg-gray-800 relative bg-peach-100 min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 lg:flex-row lg:justify-between font-sans">
@@ -38,28 +40,38 @@ const Hero = () => {
             </p>
             <div className="mt-4 flex justify-center lg:justify-start space-x-6">
               {/* Social Media Links */}
-              <a
-                href="#"
-                className="text-blue-500 hover:text-blue-600 transition"
-                title="Behance"
-              >
-                <i className="fab fa-behance text-2xl"></i>
-              </a>
-              <a
-                href="#"
-                className="text-blue-500 hover:text-blue-600 transition"
+              <motion.a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out cursor-pointer"
                 title="LinkedIn"
+                whileHover={{ scale: 1.2 }} // Hover effect to scale icon
               >
-                <i className="fab fa-linkedin text-2xl"></i>
-              </a>
+                <Linkedin className="h-8 w-8" />
+              </motion.a>
 
-              <a
-                href="#"
-                className="text-blue-500 hover:text-blue-600 transition"
-                title="GitHub"
+              <motion.a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out cursor-pointer"
+                title="X (Twitter)"
+                whileHover={{ scale: 1.2 }} // Hover effect to scale icon
               >
-                <i className="fab fa-facebook text-2xl"></i>
-              </a>
+                <X className="h-8 w-8" />
+              </motion.a>
+
+              <motion.a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out cursor-pointer"
+                title="Facebook"
+                whileHover={{ scale: 1.2 }} // Hover effect to scale icon
+              >
+                <Facebook className="h-8 w-8" />
+              </motion.a>
             </div>
           </div>
         </div>

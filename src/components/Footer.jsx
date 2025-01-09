@@ -1,5 +1,6 @@
 import React from "react";
-import { Facebook, Twitter, Instagram } from "lucide-react"; // You can use any icons
+import { Facebook, X } from "lucide-react"; // Twitter replaced with X
+import { FaLinkedinIn } from "react-icons/fa"; // LinkedIn icon from react-icons
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -90,22 +91,17 @@ const Footer = () => {
                 <Facebook className="h-6 w-6" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com"
                 className="text-gray-400 hover:text-white"
               >
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a
-                href="https://instagram.com"
-                className="text-gray-400 hover:text-white"
-              >
-                <Instagram className="h-6 w-6" />
+                <X className="h-6 w-6" /> {/* Replaced Twitter with X */}
               </a>
               <a
                 href="https://linkedin.com"
                 className="text-gray-400 hover:text-white"
               >
-                {/* <LinkedIn className="h-6 w-6" /> */}
+                <FaLinkedinIn className="h-6 w-6" />{" "}
+                {/* LinkedIn icon from react-icons */}
               </a>
             </div>
           </div>
