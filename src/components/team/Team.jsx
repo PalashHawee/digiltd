@@ -25,16 +25,14 @@ const HeroSection = () => {
     <>
       <Navbar />
       <div>
-        
-
         <div className="bg-gray-800">
           <Hero />
         </div>
+        <Resume />
         <AboutFarzanaAbedin />
-        <AboutMeSection />
+        {/* <AboutMeSection /> */}
         {/* <Achievements/> */}
         {/* <MyWorksSection /> */}
-        <Resume />
 
         {/* <ClientFeedbackSection /> */}
         {/* <Gallery /> */}

@@ -13,7 +13,7 @@ const VisionMissionValues = () => {
           className="mb-10"
         >
           <h1 className="text-5xl font-extrabold text-green-800">
-            Vision, Mission & Slogan
+            Vision, Mission & Values
           </h1>
         </motion.div>
 
