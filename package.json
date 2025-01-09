@@ -18,6 +18,7 @@
     "@react-three/fiber": "^8.17.10",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "babel-install": "^2.1.0",
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.13.3",
