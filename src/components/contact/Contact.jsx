@@ -17,7 +17,7 @@ const Contact = () => {
     try {
       const templateParams = {
         from_name: data.name, // Sender's name
-        to_name: "Your Company Name", // Recipient's name
+        to_name: "Diligence Universal Ltd", // Recipient's name
         email: data.email, // Sender's email
         subject: data.subject, // Subject
         message: data.message, // Message
@@ -25,7 +25,7 @@ const Contact = () => {
       };
 
       const response = await emailjs.send(
-        "service_2ihzxlz", // Your EmailJS service ID
+        "service_lzexars", // Your EmailJS service ID
         "template_g6ue25k", // Your EmailJS template ID
         templateParams, // Data to be sent
         "vqaldIDtu5PMgVDJ7" // Your EmailJS user ID
@@ -35,6 +35,9 @@ const Contact = () => {
       toast.success("Your response has been submitted successfully!"); // Success message
       reset(); // Reset form fields after submission
     } catch (error) {
+      console.error("Error response from EmailJS:", error);
+      console.error("Full error details:", JSON.stringify(error, null, 2));
+      toast.error("Error occurred: Check the console for details.");
       console.error("Error in form submission", error);
       toast.error("There was an error submitting the form. Please try again."); // Error message
     }
@@ -45,32 +48,36 @@ const Contact = () => {
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Contact Info */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold">Contact</h2>
-          <h3 className="text-4xl font-semibold">We Want to Hear from You</h3>
+          <h2 className="text-3xl font-bold text-white">Contact</h2>
+          <h3 className="text-4xl font-semibold text-white">
+            We Want to Hear from You
+          </h3>
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
               <div className="bg-blue-600 p-3 rounded-full">
                 <i className="fas fa-map-marker-alt"></i>
               </div>
-              <p>House 39, Road 24, Gulshan 1, Dhaka-1212, Bangladesh</p>
+              <p className="text-white">
+                House 39, Road 24, Gulshan 1, Dhaka-1212, Bangladesh
+              </p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="bg-blue-600 p-3 rounded-full">
                 <i className="fas fa-envelope"></i>
               </div>
-              <p>farzana@diligenceuniversal.com</p>
+              <p className="text-white">farzana@diligenceuniversal.com</p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="bg-blue-600 p-3 rounded-full">
                 <i className="fas fa-phone-alt"></i>
               </div>
-              <p>+8801955510730</p>
+              <p className="text-white">+8801955510730</p>
             </div>
           </div>
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white text-gray-800 p-8 rounded-lg shadow-md">
+        <div className="bg-white text-black p-8 rounded-lg shadow-md">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
